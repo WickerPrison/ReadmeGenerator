@@ -22,20 +22,6 @@ const questions = [
     }
 ];
 
-// TODO: Create a function to write README file
-function writeToFile(data) {
-    let output = `# ${data.title}
-    
-## Description
-${data.description}
-
-## Deployment Link
-${data.deployment}`;
-
-    fs.writeFile(data.filename + ".md", output, (err) =>
-    err ? console.error(err) : console.log("Success"));
-}
-
 // TODO: Create a function to initialize app
 function init() {
     inquirer
@@ -64,6 +50,36 @@ function init() {
         .then((response) => {
             writeToFile(response);
         });
+}
+
+// TODO: Create a function to write README file
+function writeToFile(data) {
+    let output = createOutput(data);
+    fs.writeFile(data.filename + ".md", output, (err) =>
+    err ? console.error(err) : console.log("Success"));
+}
+
+function createOutput(data){
+return `# ${data.title}
+    
+## Description
+${data.description}
+
+## Table of Contents
+
+## Installation
+
+## Usage
+
+## License
+
+## Contributing
+
+## Tests
+
+## Questions
+
+`;
 }
 
 // Function call to initialize app
