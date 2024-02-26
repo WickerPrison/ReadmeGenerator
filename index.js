@@ -6,11 +6,6 @@ inquirer
     .prompt([
         {
             type: "input",
-            message: "What should be the filename of your readme?",
-            name: "filename"
-        },
-        {
-            type: "input",
             message: "What is the title of your project?",
             name: "title"
         },
@@ -44,7 +39,10 @@ inquirer
             message: "Which license will this product use?",
             name: "license",
             choices:[
-                {name: "MIT", value: "MIT"}
+                {name: "MIT", value: "MIT"},
+                {name: "GNU GPLv3", value: "GNU GPLv3"},
+                {name: "ISC", value:"ISC"},
+                {name: "Apache License 2.0", value: "Apache License 2.0"}
             ]
         },
         {
@@ -61,7 +59,7 @@ inquirer
 // TODO: Create a function to write README file
 function writeToFile(data) {
     let output = createOutput(data);
-    fs.writeFile(data.filename + ".md", output, (err) =>
+    fs.writeFile("output.md", output, (err) =>
     err ? console.error(err) : console.log("Success"));
 }
 
@@ -81,6 +79,7 @@ ${data.install}
 ${data.usage}
 
 ## License
+Distributed under the ${data.license} License. See LICENSE.txt for more information.
 
 ## Contributing
 ${data.contribute}
