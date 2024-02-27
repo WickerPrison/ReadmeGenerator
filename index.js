@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const licenseText = require('./licenseText.js');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 inquirer
     .prompt([
@@ -69,7 +70,7 @@ inquirer
 
 // TODO: Create a function to write README file
 function writeToFile(data) {
-    let output = createOutput(data);
+    let output = generateMarkdown(data);
     fs.writeFile("./Output/README.md", output, (err) =>
     err ? console.error(err) : console.log("Success"));
     fs.writeFile("./Output/LICENSE.txt", licenseText.licenseText[data.license], (err) =>
@@ -77,40 +78,7 @@ function writeToFile(data) {
 }
 
 
-function createOutput(data){
-return `
-[![GitHub License](https://img.shields.io/github/license/${data.user}/${data.repo})](https://github.com/${data.user}/${data.repo}/blob/main/LICENSE.txt)
-# ${data.title}
-    
-## Description
-${data.description}
-
-## Table of Contents
-
-## Installation
-${data.install}
-
-## Usage
-${data.usage}
-
-## License
-Distributed under the ${data.license} License. See LICENSE.txt for more information.
-
-## Contributing
-${data.contribute}
-
-## Tests
-${data.test}
-
-## Questions
-
-`;
-}
-
-
 /*
-WHEN I choose a license for my application from a list of options
-THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
 WHEN I enter my GitHub username
 THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
 WHEN I enter my email address
