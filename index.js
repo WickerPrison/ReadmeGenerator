@@ -7,6 +7,16 @@ inquirer
     .prompt([
         {
             type: "input",
+            message: "What is your Github username?",
+            name: "user"
+        },
+        {
+            type: "input",
+            message: "What is the name of the Github repo?",
+            name: "repo"
+        },
+        {
+            type: "input",
             message: "What is the title of your project?",
             name: "title"
         },
@@ -68,7 +78,9 @@ function writeToFile(data) {
 
 
 function createOutput(data){
-return `# ${data.title}
+return `
+[![GitHub License](https://img.shields.io/github/license/${data.user}/${data.repo})](https://github.com/${data.user}/${data.repo}/LICENSE.txt)
+# ${data.title}
     
 ## Description
 ${data.description}

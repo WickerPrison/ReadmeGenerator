@@ -1,4 +1,4 @@
-
+// This object contains the full text of all 4 licenses offered by this readme generator
 const licenseText = {
 // MIT License
     "MIT": `MIT License
