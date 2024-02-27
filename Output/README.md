@@ -1,5 +1,5 @@
 
-[![GitHub License](https://img.shields.io/github/license/WickerPrison/ReadmeGenerator)](https://github.com/WickerPrison/ReadmeGenerator/LICENSE.txt)
+[![GitHub License](https://img.shields.io/github/license/WickerPrison/ReadmeGenerator)](https://github.com/WickerPrison/ReadmeGenerator/blob/main/LICENSE.txt)
 # 
     
 ## Description

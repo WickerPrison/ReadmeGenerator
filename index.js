@@ -79,7 +79,7 @@ function writeToFile(data) {
 
 function createOutput(data){
 return `
-[![GitHub License](https://img.shields.io/github/license/${data.user}/${data.repo})](https://github.com/${data.user}/${data.repo}/LICENSE.txt)
+[![GitHub License](https://img.shields.io/github/license/${data.user}/${data.repo})](https://github.com/${data.user}/${data.repo}/blob/main/LICENSE.txt)
 # ${data.title}
     
 ## Description
