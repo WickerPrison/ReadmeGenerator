@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const licenseText = require('./licenseText.js');
 
 inquirer
     .prompt([
@@ -59,7 +60,9 @@ inquirer
 // TODO: Create a function to write README file
 function writeToFile(data) {
     let output = createOutput(data);
-    fs.writeFile("output.md", output, (err) =>
+    fs.writeFile("./Output/README.md", output, (err) =>
+    err ? console.error(err) : console.log("Success"));
+    fs.writeFile("./Output/LICENSE.txt", licenseText.licenseText[data.license], (err) =>
     err ? console.error(err) : console.log("Success"));
 }
 
