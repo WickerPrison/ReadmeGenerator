@@ -1,5 +1,5 @@
 
-[![GitHub License](https://img.shields.io/github/license/WickerPrison/ReadmeGenerator)](https://github.com/WickerPrison/ReadmeGenerator/blob/main/LICENSE.txt)
+[![GitHub License](https://img.shields.io/github/license/wickerprison/readmegenerator)](https://github.com/wickerprison/readmegenerator/blob/main/LICENSE.txt)
 # 
     
 ## Description
@@ -14,7 +14,7 @@
 
 
 ## License
-Distributed under the MIT License. See LICENSE.txt for more information.
+Distributed under the ISC License. See LICENSE.txt for more information.
 
 ## Contributing
 
