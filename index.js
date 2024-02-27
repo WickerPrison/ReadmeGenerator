@@ -18,6 +18,11 @@ inquirer
         },
         {
             type: "input",
+            message: "What email should users send questions to?",
+            name: "email"
+        },
+        {
+            type: "input",
             message: "What is the title of your project?",
             name: "title"
         },
@@ -54,7 +59,8 @@ inquirer
                 {name: "MIT", value: "MIT"},
                 {name: "GNU GPLv3", value: "GNU GPLv3"},
                 {name: "ISC", value:"ISC"},
-                {name: "Apache License 2.0", value: "Apache License 2.0"}
+                {name: "Apache License 2.0", value: "Apache License 2.0"},
+                {name: "None", value:""}
             ]
         },
         {
@@ -73,16 +79,14 @@ function writeToFile(data) {
     let output = generateMarkdown(data);
     fs.writeFile("./Output/README.md", output, (err) =>
     err ? console.error(err) : console.log("Success"));
-    fs.writeFile("./Output/LICENSE.txt", licenseText.licenseText[data.license], (err) =>
-    err ? console.error(err) : console.log("Success"));
+    if(data.license != data.license){
+        fs.writeFile("./Output/LICENSE.txt", licenseText.licenseText[data.license], (err) =>
+        err ? console.error(err) : console.log("Success"));
+    }
 }
 
 
 /*
-WHEN I enter my GitHub username
-THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
-WHEN I enter my email address
-THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
 WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
 */
