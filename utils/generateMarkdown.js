@@ -39,6 +39,54 @@ function renderQuestionSection(data){
   return output;
 }
 
+function renderTableOfContents(data){
+  let output = `## Table of Contents
+`;
+  if(data.description != ""){
+    output += `
+  [Description](#description)
+  `;
+  }
+
+  if(data.install != ""){
+    output += `
+  [Installation](#installation)
+  `;
+  }
+
+  if(data.usage != ""){
+    output += `
+  [Usage](#usage)
+  `;
+  }
+
+  if(data.license != ""){
+    output += `
+  [License](#license)
+  `;
+  }
+
+  if(data.contribute != ""){
+    output += `
+  [Contributing](#contributing)
+  `;
+  }
+
+  if(data.test != ""){
+    output += `
+  [Tests](#tests)
+  `;
+  }
+
+  if(data.user != "" || data.email != ""){
+    output += `
+  [Questions](#questions)
+  `;
+  }
+
+  return output;
+}
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `
@@ -49,8 +97,7 @@ function generateMarkdown(data) {
   ${renderSection(data.description, `## Description
   ${data.description}`)}
   
-  ## Table of Contents
-  [Tests](#tests-id)
+  ${renderTableOfContents(data)}
   
   ${renderSection(data.install, `## Installation
   ${data.install}`)}
@@ -65,7 +112,7 @@ function generateMarkdown(data) {
   ${renderSection(data.contribute, `## Contributing
   ${data.contribute}`)}
   
-  ${renderSection(data.test, `## Tests {#tests-id}
+  ${renderSection(data.test, `## Tests
   ${data.test}`)}
 
   ${renderQuestionSection(data)}
