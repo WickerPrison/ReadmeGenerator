@@ -1,48 +1,39 @@
 
-  [![GitHub License](https://img.shields.io/github/license/wickerprison/sdlfjkl)](https://github.com/wickerprison/sdlfjkl/blob/main/LICENSE.txt)
+  [![GitHub License](https://img.shields.io/github/license/wickerprison/readmegenerator)](https://github.com/wickerprison/readmegenerator/blob/main/LICENSE.txt)
  
-  # fsadlfjsd
+  # Readme Generator
       
   ## Description
-  asldfjasd
+  This command line application quickly generates a README.md and a LICENSE.txt file. It was created using JavaScript, NodeJs, and the Inquirer package.
   
   ## Table of Contents
 
   [Description](#description)
   
-  [Installation](#installation)
-  
   [Usage](#usage)
   
   [License](#license)
   
-  [Contributing](#contributing)
-  
-  [Tests](#tests)
-  
   [Questions](#questions)
   
   
-  ## Installation
-  lkdsjf
+  
 
   ## Usage
-  asdlkj
+  put link to video here
  
   ## License
   Distributed under the MIT License. See LICENSE.txt for more information.
   
-  ## Contributing
-  lkjsdf
   
-  ## Tests
-  lkjsdf
+  
+  
 
   ## Questions
   Please direct any additional questions here.
   
   GitHub Profile: [wickerprison](https://github.com/wickerprison)
   
-  Email: <asdlfjasd>
+  Email: <cobylax17@gmail.com>
   
   

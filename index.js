@@ -63,11 +63,6 @@ inquirer
                 {name: "Apache License 2.0", value: "Apache License 2.0"},
                 {name: "None", value:""}
             ]
-        },
-        {
-            type: "input",
-            message: "Give your deployment link",
-            name: "deployment"
         }
     ])
     .then((response) => {
