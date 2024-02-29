@@ -1,9 +1,10 @@
-// TODO: Include packages needed for this application
+// include packages and other scripts
 const inquirer = require('inquirer');
 const fs = require('fs');
 const licenseText = require('./licenseText.js');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
+// sets up the questions the user will answer
 inquirer
     .prompt([
         {
@@ -74,7 +75,7 @@ inquirer
     });
 
 
-// TODO: Create a function to write README file
+// writes response to files
 function writeToFile(data) {
     let output = generateMarkdown(data);
     fs.writeFile("./Output/README.md", output, (err) =>

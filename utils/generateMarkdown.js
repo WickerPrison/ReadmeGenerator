@@ -1,5 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// creates the license badge
 function renderLicenseBadge(data) {
   if(data.license != ""){
     return `[![GitHub License](https://img.shields.io/github/license/${data.user}/${data.repo})](https://github.com/${data.user}/${data.repo}/blob/main/LICENSE.txt)`;
@@ -9,6 +8,7 @@ function renderLicenseBadge(data) {
   }
 }
 
+// checks if a section is empty and adds it to the output if it is not
 function renderSection(dataElement, output){
   if(dataElement == ""){
     return "";
@@ -18,6 +18,7 @@ function renderSection(dataElement, output){
   }
 }
 
+// sets up the questions section of the readme
 function renderQuestionSection(data){
   if(data.user == "" && data.email == "") return;
   let output = `## Questions
@@ -39,6 +40,7 @@ function renderQuestionSection(data){
   return output;
 }
 
+// sets up the table of contents
 function renderTableOfContents(data){
   let output = `## Table of Contents
 `;
@@ -87,7 +89,7 @@ function renderTableOfContents(data){
   return output;
 }
 
-// TODO: Create a function to generate markdown for README
+// creates the string that will be written to the markdown file
 function generateMarkdown(data) {
   return `
   ${renderLicenseBadge(data)}
