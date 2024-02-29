@@ -20,7 +20,10 @@
   
 
   ## Usage
-  put link to video here
+  Simply run the program and answer the questions when prompted. A README.md and a LICENSE.txt file will be generated inside a folder titled Output.
+  For more detailed instructions watch the video below.
+  
+  [Instructional Video](https://youtu.be/81gU3WJ3ELg)
  
   ## License
   Distributed under the MIT License. See LICENSE.txt for more information.
